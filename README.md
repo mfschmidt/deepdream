@@ -8,18 +8,17 @@ The jupyter notebook here was originally found at https://github.com/google/deep
 You must first install all of the dependencies, which could differ depending on your OS. I'm using Ubuntu 17.04 which makes things easier than doing this on Windows or a less-supported linux flavor.
 
 1. Caffe (the machine learning framework) from http://caffe.berkeleyvision.org/installation.html. I've had trouble installing caffe for use within a virtualenv, so I just ran it on my global python installation rather than invest the time to make it work. If you require virtualenv, see https://github.com/BVLC/caffe/issues/2450 to get yourself started.
-2. Python3 libraries, in Ubuntu (sudo for global installation, but not for virtualenvs) just
-```
-    $ sudo pip3 install numpy scipy Pillow
-```
-3. Google's protocol buffers software
+2. Google's protocol buffers software
 ```
     $ sudo apt install python3-protobuf
 ```
-4. Jupyter notebook support
+3. Jupyter notebook support
 ```
     $ sudo apt install jupyter-core
-    $ sudo pip3 install jupyter
+```
+4. Python3 libraries, in Ubuntu (sudo for global installation, but not for virtualenvs) just
+```
+    $ sudo pip3 install numpy scipy Pillow ipython jupyter
 ```
 ## Running it
 
