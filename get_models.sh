@@ -7,22 +7,22 @@ cd models
 # Make a directory for the BLVC Googlenet model and download it.
 if [ -d deeper ]; then
     echo "The deeper model exists and I'd rather not waste bandwidth to re-get it."
-    echo "If you'd like to get it anyway, just delete the deeper subdirectory and run get_models.sh again."
+    echo "If you'd like to get it anyway, just delete or rename the deeper subdirectory and run get_models.sh again."
 else
     mkdir deeper
     cd deeper
     wget http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel
-    wget https://github.com/BVLC/caffe/blob/master/models/bvlc_googlenet/deploy.prototxt
-    wget https://github.com/BVLC/caffe/blob/master/models/bvlc_googlenet/quick_solver.prototxt
-    wget https://github.com/BVLC/caffe/blob/master/models/bvlc_googlenet/solver.prototxt
-    wget https://github.com/BVLC/caffe/blob/master/models/bvlc_googlenet/train_val.prototxt
+    wget https://raw.githubusercontent.com/BVLC/caffe/master/models/bvlc_googlenet/deploy.prototxt
+    wget https://raw.githubusercontent.com/BVLC/caffe/master/models/bvlc_googlenet/quick_solver.prototxt
+    wget https://raw.githubusercontent.com/BVLC/caffe/master/models/bvlc_googlenet/solver.prototxt
+    wget https://raw.githubusercontent.com/BVLC/caffe/master/models/bvlc_googlenet/train_val.prototxt
     cd ..
 fi
 
 # Make a directory for the cars model and download it.
 if [ -d cars ]; then
     echo "The cars model exists and I'd rather not waste bandwidth to re-get it."
-    echo "If you'd like to get it anyway, just delete the cars subdirectory and run get_models.sh again."
+    echo "If you'd like to get it anyway, just delete or rename the cars subdirectory and run get_models.sh again."
 else
     mkdir cars
     cd cars
@@ -36,18 +36,22 @@ fi
 # Make a directory for the places model and download it.
 if [ -d places ]; then
     echo "The places model exists and I'd rather not waste bandwidth to re-get it."
-    echo "If you'd like to get it anyway, just delete the places subdirectory and run get_models.sh again."
+    echo "If you'd like to get it anyway, just delete or rename the places subdirectory and run get_models.sh again."
 else
     wget http://places.csail.mit.edu/model/googlenet_places205.tar.gz
     tar -xzf googlenet_places205.tar.gz
     rm googlenet_places205.tar.gz
     mv googlenet_places205 places
+    cd places
+    mv deploy_places205.protxt deploy.prototxt
+    mv googlelet_places205_train_iter_2400000.caffemodel googlenet_places.caffemodel    
+    cd ..
 fi
 
 # Make a directory for the faces model and download it.
 if [ -d faces ]; then
     echo "The faces model exists and I'd rather not waste bandwidth to re-get it."
-    echo "If you'd like to get it anyway, just delete the faces subdirectory and run get_models.sh again."
+    echo "If you'd like to get it anyway, just delete or rename the faces subdirectory and run get_models.sh again."
 else
     mkdir faces
     cd faces

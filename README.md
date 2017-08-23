@@ -48,3 +48,4 @@ You must first install all of the dependencies, which could differ depending on 
     $ jupyter notebook
 ```
 2. From the browser, select your notebook and use the toolbar to run chunks of code.
+
