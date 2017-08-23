@@ -34,8 +34,11 @@ You must first install all of the dependencies, which could differ depending on 
     $ get_models.sh
     ```
     a. Googlenet original from https://github.com/BVLC/caffe/tree/master/models/bvlc_googlenet and published as "Going deeper with Convolutions." Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich, arXiv:1409.4842
+    
     b. Googlenet cars from https://gist.github.com/bogger/b90eb88e31cd745525ae and published as "A Large-Scale Car Dataset for Fine-Grained Categorization and Verification." L. Yang, P. Luo, C. C. Loy, X. Tang, arXiv:1506.08959, 2015
+    
     c. Facial recognition from https://gist.github.com/ishay2b/58248e5f3c3bf575ac40 and published as "Facial Landmark Detection with Tweaked Convolutional Neural Networks." Yue Wu and Tal Hassner, arXiv:1511.04031, 2015
+    
     d. MIT places from http://places.csail.mit.edu/model/googlenet_places205.tar.gz and published in “Learning Deep Features for Scene Recognition using Places Database.” B. Zhou, A. Lapedriza, J. Xiao, A. Torralba, and A. Oliva. Advances in Neural Information Processing Systems 27 (NIPS), 2014
 
 ## Running it, as often as you like
