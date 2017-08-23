@@ -20,16 +20,29 @@ You must first install all of the dependencies, which could differ depending on 
 ```
     $ sudo pip3 install numpy scipy Pillow ipython jupyter
 ```
+5. Clone this repository
+```
+    $ git clone git@github.com:mfschmidt/deepdream.git
+    $ cd deepdream
+```
+6. Download caffe models. They are too big to duplicate in github repositories so I put their urls in text files for wget.
+    a. Googlenet original from https://github.com/BVLC/caffe/tree/master/models/bvlc_googlenet and published as "Going deeper with Convolutions." Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich, arXiv:1409.4842
+    ```
+    $ cd googlenet_bvlc; wget -i model.urls; cd -
+    ```
+    b. Googlenet cars from https://gist.github.com/bogger/b90eb88e31cd745525ae and published as "A Large-Scale Car Dataset for Fine-Grained Categorization and Verification." L. Yang, P. Luo, C. C. Loy, X. Tang, arXiv:1506.08959, 2015
+    ```
+    $ cd googlenet_cars; wget -i model.urls; cd -
+    ```
+    c. Facial recognition from https://gist.github.com/ishay2b/58248e5f3c3bf575ac40 and published as "Facial Landmark Detection with Tweaked Convolutional Neural Networks." Yue Wu and Tal Hassner, arXiv:1511.04031, 2015
+    ```
+    $ cd vanilla_cnn; wget -i model.urls; cd -
+    ```
 ## Running it
 
 1. From the shell, navigate to wherever you keep your projects.
 ```
     $ cd /home/mike/projects
-```
-2. Clone this repository
-```
-    $ git clone git@github.com:mfschmidt/deepdream.git
-    $ cd deepdream
 ```
 3. Run it
 ```
