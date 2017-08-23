@@ -29,7 +29,8 @@ You must first install all of the dependencies, which could differ depending on 
     $ git clone git@github.com:mfschmidt/deepdream.git
     $ cd deepdream
 ```
-7. Download caffe models. They are too big to duplicate in github repositories so I put their urls in text files for wget.
+7. Download caffe models. They are too big to duplicate in github repositories so I put their urls in text files for wget. You can download one or all of these and modify the code to use the one you like.
+
     a. Googlenet original from https://github.com/BVLC/caffe/tree/master/models/bvlc_googlenet and published as "Going deeper with Convolutions." Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich, arXiv:1409.4842
     ```
     $ cd googlenet_bvlc; wget -i model.urls; cd -
@@ -41,6 +42,10 @@ You must first install all of the dependencies, which could differ depending on 
     c. Facial recognition from https://gist.github.com/ishay2b/58248e5f3c3bf575ac40 and published as "Facial Landmark Detection with Tweaked Convolutional Neural Networks." Yue Wu and Tal Hassner, arXiv:1511.04031, 2015
     ```
     $ cd vanilla_cnn; wget -i model.urls; cd -
+    ```
+    d. MIT places from http://places.csail.mit.edu/model/googlenet_places205.tar.gz and published in “Learning Deep Features for Scene Recognition using Places Database.” B. Zhou, A. Lapedriza, J. Xiao, A. Torralba, and A. Oliva. Advances in Neural Information Processing Systems 27 (NIPS), 2014
+    ```
+    $ wget http://places.csail.mit.edu/model/googlenet_places205.tar.gz; tar -xzf googlenet_places205.tar.gz; rm googlenet_places205.tar.gz
     ```
 ## Running it, as often as you like
 
